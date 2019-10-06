@@ -1,0 +1,16 @@
+server:
+  port: 8761   # HTTP (Tomcat) port
+  waitTimeInMsWhenSyncEmpty: 0    #wait time for subsequent sync
+
+# Configure this Discovery Server
+eureka:
+  client:  # Not a client, don't register with yourself
+    registerWithEureka: false
+    fetchRegistry: false
+  serviceUrl:
+    defaultZone: http://localhost:8761/eureka
+
+# Discovery Server Dashboard uses FreeMarker.  Don't want Thymeleaf templates
+spring:
+  thymeleaf:
+    enabled: false     # Disable Thymeleaf
