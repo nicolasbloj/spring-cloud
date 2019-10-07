@@ -22,20 +22,14 @@
 	</properties>
 
 	<dependencies>
-		<!-- 3a) Dependency for spring-cloud-config-Server -->
+
 		<dependency>
 			<groupId>org.springframework.cloud</groupId>
 			<artifactId>spring-cloud-config-server</artifactId>
 		</dependency>
 
-		<!-- 3b) Dependency for testing boot projects -->
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-test</artifactId>
-			<scope>test</scope>
-		</dependency>
 	</dependencies>
-	<!-- 4) Dependency Management -->
+
 	<dependencyManagement>
 		<dependencies>
 			<dependency>
@@ -48,7 +42,6 @@
 		</dependencies>
 	</dependencyManagement>
 
-	<!-- 5) Maven Plugin to build spring boot applications -->
 	<build>
 		<plugins>
 			<plugin>
