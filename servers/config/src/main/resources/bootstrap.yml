@@ -6,8 +6,7 @@ spring:
     config:
       server:
         git:
-        ##uri: https://github.com/nicolasbloj/spring-cloud-config-repo
-        uri: https://github.com/nicolasbloj/spring-cloud/tree/develop/servers/config-repo
+        uri: https://github.com/nicolasbloj/spring-cloud-config-repo
 
 profiles:
     active: dev
