@@ -1,18 +1,14 @@
 package com.nab.greeting;
 
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+
 import java.io.Serializable;
 
+@Getter
+@AllArgsConstructor
 public class Greeting implements Serializable {
 
-	private static final long serialVersionUID = 1L;
-	
     private final String content;
 
-    public Greeting(String content) {
-        this.content = content;
-    }
-
-    public String getContent() {
-        return content;
-    }
 }
