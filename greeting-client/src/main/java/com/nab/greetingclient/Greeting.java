@@ -2,11 +2,12 @@ package com.nab.greetingclient;
 
 
 import com.fasterxml.jackson.annotation.JsonRootName;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
 
-/**
- * Greeting DTO - used to interact with the {@link ClientGreetingService}.
- */
 @JsonRootName("greeting")
+@Getter
+@AllArgsConstructor
 public class Greeting {
 
     protected String content;
@@ -18,12 +19,5 @@ public class Greeting {
         this.content = "Hello!";
     }
 
-    public Greeting(String content) {
-        this.content = content;
-    }
-
-    public String getContent() {
-        return content;
-    }
 }
 

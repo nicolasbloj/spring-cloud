@@ -1,20 +1,23 @@
-package com.nab.greetingclient;
+
+package com.nab.greetingclient.opt1;
 
 
-import java.util.logging.Logger;
-import javax.annotation.PostConstruct;
-
+import com.nab.greetingclient.Greeting;
+import lombok.extern.log4j.Log4j2;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cloud.client.loadbalancer.LoadBalanced;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
+
+import javax.annotation.PostConstruct;
 
 
 /**
  * Hide the access to the microservice inside this local service.
  */
 @Service
-public class ClientGreetingService {
+@Log4j2
+public class ClientGreetingServiceR {
 
     @Autowired
     @LoadBalanced
@@ -22,9 +25,7 @@ public class ClientGreetingService {
 
     protected String serviceUrl;
 
-    protected Logger logger = Logger.getLogger(ClientGreetingService.class.getName());
-
-    public ClientGreetingService(String serviceUrl) {
+    public ClientGreetingServiceR(String serviceUrl) {
         this.serviceUrl = serviceUrl.startsWith("http") ? serviceUrl : "http://" + serviceUrl;
     }
 
@@ -37,14 +38,13 @@ public class ClientGreetingService {
     public void demoOnly() {
         // Can't do this in the constructor because the RestTemplate injection
         // happens afterwards.
-        logger.warning("The RestTemplate request factory is "
+        log.info("The RestTemplate request factory is "
                 + restTemplate.getRequestFactory());
     }
 
     public Greeting greeting(String name) {
 
-
-        logger.info("greeting() invoked: for " + name);
+        log.info("greeting() invoked: for " + name);
 
         Greeting greeting = restTemplate.getForObject(serviceUrl + "/greeting/{name}", Greeting.class, name);
 
