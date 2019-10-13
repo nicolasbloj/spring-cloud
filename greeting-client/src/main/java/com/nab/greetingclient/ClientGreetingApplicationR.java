@@ -12,10 +12,13 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.web.client.RestTemplate;
 
-
+// TODO: 2019-10-13   opt1 no work
 /**
  *
- * USA RIBON PERO NO VA POR ZUUL COMO EN EL OTRO CAMINO
+ * Por ahora
+ * De esta manera con restTemplate estamos usando ribbon pero no està yendo
+ * por zuul como si sucede por la opcion 2 usando feign, està yendpo por
+ * eureka
  */
 
 /**
