@@ -1,4 +1,4 @@
-package com.nab.gateway;
+package com.nab.gateway.config;
 
 import com.netflix.zuul.ZuulFilter;
 import lombok.NoArgsConstructor;

@@ -1,4 +1,4 @@
-package com.nab.gateway;
+package com.nab.gateway.config;
 
 import com.netflix.zuul.ZuulFilter;
 import com.netflix.zuul.context.RequestContext;
@@ -31,7 +31,7 @@ public class MyZuulFilter extends ZuulFilter {
     @Override
     public Object run() {
         final HttpServletRequest request = RequestContext.getCurrentContext().getRequest();
-        log.info("{} petición a {}", request.getMethod(), request.getRequestURL().toString());
+        log.info("{} peticion a {}", request.getMethod(), request.getRequestURL().toString());
         return null;
     }
 }

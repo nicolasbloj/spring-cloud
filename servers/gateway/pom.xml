@@ -55,8 +55,13 @@
 			<version>${lombok.version}</version>
 			<scope>provided</scope>
 		</dependency>
+		<!-- For Hystrix Fallback Configuration -->
+        <!--dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-netflix-core</artifactId>
+        </dependency-->
 
-	</dependencies>
+    </dependencies>
 
 	<dependencyManagement>
 		<dependencies>
