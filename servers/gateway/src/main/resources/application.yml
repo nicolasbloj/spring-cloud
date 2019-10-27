@@ -1,0 +1,16 @@
+server:
+  port: 8081
+
+zuul:
+  routes:
+    greeting-service:
+      path: /greeting-service/**
+      serviceId: greeting-service
+
+ribbon:
+  eureka:
+    enabled: false
+
+greeting-service:
+  ribbon:
+    listOfServers: localhost:2221, localhost:2223
