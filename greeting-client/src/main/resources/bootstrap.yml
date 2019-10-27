@@ -25,4 +25,4 @@ ribbon:
 
 zuul-server:
   ribbon:
-    listOfServers: localhost:8080, localhost:8081
+    listOfServers: localhost:8081

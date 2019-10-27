@@ -12,14 +12,11 @@ import lombok.Getter;
 @AllArgsConstructor
 public class Greeting {
 
-    protected String content;
+    private String content;
 
-    /**
-     * Default constructor
-     */
-    protected Greeting() {
-        this.content = "Hello!";
-    }
+    private String port;
+
+    private String property;
 
 }
 

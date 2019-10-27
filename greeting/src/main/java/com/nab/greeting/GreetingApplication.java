@@ -3,14 +3,15 @@ package com.nab.greeting;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
+import org.springframework.cloud.context.config.annotation.RefreshScope;
 
 
 /**
  * Run as a micro-service, registering with the Discovery Server (Eureka)
  */
 @SpringBootApplication
-//@EnableAutoConfiguration // ? defines this as a Spring Boot application
 @EnableDiscoveryClient
+@RefreshScope
 public class GreetingApplication {
 
 	public static void main(String[] args) {
