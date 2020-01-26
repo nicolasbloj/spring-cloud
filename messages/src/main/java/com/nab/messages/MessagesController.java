@@ -8,6 +8,7 @@ import reactor.core.publisher.Mono;
 
 @Log4j2
 @RestController
+@CrossOrigin
 public class MessagesController {
     
     @Autowired
